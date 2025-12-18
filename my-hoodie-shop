@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HHH Hoodie Store</title>
+    <style>
+        body { background-color: #000; color: white; text-align: center; font-family: Arial; }
+        .product-card { border: 1px solid #333; padding: 20px; margin-top: 50px; }
+        img { max-width: 90%; height: auto; border-radius: 10px; }
+        h1 { color: #ff0000; }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <h1>HHH PREMIUM HOODIE</h1>
+        <p>Premium embroidered design - Limited Edition</p>
+        <img src="1765712139607.jpg" alt="HHH Hoodie">
+        <br><br>
+        <button style="padding: 10px 20px; background: red; color: white; border: none;">Order Now</button>
+    </div>
+</body>
+</html>
