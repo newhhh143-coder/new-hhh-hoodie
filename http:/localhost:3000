@@ -1,0 +1,39 @@
+import { motion } from "framer-motion"; import { ShoppingCart } from "lucide-react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button";
+
+export default function Page() { return ( <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6"> {/* Hero Section */} <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-10" > <h1 className="text-4xl md:text-5xl font-bold tracking-tight"> NEW <span className="text-blue-600">HHH</span> Hoodie </h1> <p className="text-gray-600 mt-3 max-w-xl"> Premium embroidered hoodie. Stylish, comfortable & made for everyday wear. </p> </motion.div>
+
+{/* Product Card */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+  >
+    <Card className="max-w-md rounded-2xl shadow-xl">
+      <CardContent className="p-6">
+        <img
+          src="/hoodie.png"
+          alt="HHH Hoodie"
+          className="rounded-xl mb-5"
+        />
+
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-semibold">NEW HHH Embroidered Hoodie</h2>
+          <span className="text-xl font-bold text-green-600">₹1999</span>
+        </div>
+
+        <p className="text-gray-600 text-sm mb-6">
+          Soft fabric with high‑quality embroidery logo. Available in multiple colors & sizes.
+        </p>
+
+        <Button className="w-full flex gap-2 text-lg rounded-xl">
+          <ShoppingCart /> Buy Now
+        </Button>
+      </CardContent>
+    </Card>
+  </motion.div>
+
+  {/* Footer */}
+  <p className="text-sm text-gray-400 mt-10">© 2025 HHH Brand. All rights reserved.</p>
+</div>
+
+); }
