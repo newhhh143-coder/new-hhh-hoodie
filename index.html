@@ -1,30 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW HHH Hoodie</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 p-4 flex justify-center font-sans">
-    <div class="max-w-sm bg-white rounded-3xl shadow-2xl p-6 text-center">
-        <h1 class="text-3xl font-black mb-4 tracking-tighter">NEW HHH</h1>
-        <img id="view" src="1765711462418.jpg" class="w-full rounded-2xl mb-6 shadow-md border">
+    <title>NEW HHH - Premium Collection</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background: #ececec; margin: 0; padding: 15px; }
+        .logo-top { width: 80px; margin-bottom: 10px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .card { background: white; padding: 25px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); max-width: 400px; margin: auto; position: relative; }
         
-        <div class="flex justify-center gap-3 mb-6">
-            <button onclick="document.getElementById('view').src='1765711462418.jpg'" class="w-8 h-8 rounded-full bg-white border-2 border-gray-300 shadow"></button>
-            <button onclick="document.getElementById('view').src='1765711383657.jpg'" class="w-8 h-8 rounded-full bg-slate-900 border-2 border-gray-300 shadow"></button>
-            <button onclick="document.getElementById('view').src='1765711305726.jpg'" class="w-8 h-8 rounded-full bg-gray-300 border-2 border-gray-300 shadow"></button>
+        /* Realistic Logo Overlay Logic */
+        .image-container { position: relative; width: 100%; border-radius: 20px; overflow: hidden; background: #fff; }
+        .main-img { width: 100%; display: block; border-radius: 20px; }
+        .logo-on-hoodie { 
+            position: absolute; 
+            top: 52%; left: 50%; 
+            transform: translate(-50%, -50%); 
+            width: 85px; 
+            opacity: 0.85; 
+            mix-blend-mode: multiply; /* Ise realistic banane ke liye */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .thumb-container { display: flex; justify-content: center; gap: 10px; margin: 20px 0; overflow-x: auto; padding: 5px; }
+        .thumb { width: 65px; height: 65px; border-radius: 12px; cursor: pointer; border: 2px solid #ddd; object-fit: cover; transition: 0.2s; }
+        .thumb:hover { border-color: #000; transform: scale(1.05); }
+        
+        .price-tag { color: #1b5e20; font-size: 28px; font-weight: 800; margin: 15px 0 5px 0; }
+        .buy-btn { background: #000; color: #fff; width: 100%; padding: 18px; border: none; border-radius: 15px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+    <img src="20251208_190849.png" class="logo-top" alt="Brand Logo">
+
+    <div class="card">
+        <h2 style="margin-top: 0; letter-spacing: 1px;">NEW HHH PREMIUM</h2>
+        
+        <div class="image-container">
+            <img id="view" src="050dbe7e-2ace-417e-b602-4f72fd5f9be5.jpg" class="main-img">
+            <img src="20251208_190849.png" class="logo-on-hoodie">
         </div>
 
-        <div class="flex justify-between items-center mb-6">
-            <span class="text-2xl font-bold text-green-600">₹1,999</span>
-            <span class="text-sm text-gray-400 font-medium">Free Delivery</span>
+        <div class="thumb-container">
+            <img src="050dbe7e-2ace-417e-b602-4f72fd5f9be5.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
+            <img src="066935a5ad67999bd4e58cbe5d3648f7.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
+            <img src="1b1b96ddcece496bbe7d896e8f3c693e.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
         </div>
 
-        <button class="w-full bg-black text-white py-4 rounded-2xl font-bold text-lg active:scale-95 transition-transform">
-            Buy Now
+        <div class="price-tag">₹1,999</div>
+        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Premium Quality Cotton • Realistic Print</p>
+        
+        <button class="buy-btn" onclick="window.location.href='https://wa.me/91XXXXXXXXXX?text=Bhai, mujhe ye NEW HHH Hoodie order karni hai'">
+            Order on WhatsApp
         </button>
     </div>
+
 </body>
 </html>
