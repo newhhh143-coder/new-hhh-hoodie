@@ -1,56 +1,55 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { ShoppingCart, Phone } from "lucide-react";
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW HHH - Premium Collection</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #f4f4f4; margin: 0; padding: 15px; }
+        .logo-top { width: 70px; margin-bottom: 10px; border-radius: 50%; }
+        .card { background: white; padding: 20px; border-radius: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
+        
+        /* Realistic Logo Overlay */
+        .img-box { position: relative; width: 100%; border-radius: 15px; overflow: hidden; }
+        .main-img { width: 100%; display: block; border-radius: 15px; }
+        .hoodie-logo { 
+            position: absolute; 
+            top: 48%; left: 50%; 
+            transform: translate(-50%, -50%); 
+            width: 80px; 
+            opacity: 0.8; 
+            mix-blend-mode: soft-light; /* Kapde par asli dikhne ke liye */
+            filter: contrast(1.2);
+        }
 
-export default function NewHHHHoodieWebsite() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-      <Card className="max-w-5xl w-full rounded-2xl shadow-xl">
-        <CardContent className="grid md:grid-cols-2 gap-10 p-8">
-          
-          {/* Hoodie Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center justify-center"
-          >
-            <img
-              src="/hoodie.png"
-              alt="NEW HHH Hoodie"
-              className="rounded-2xl shadow-lg"
-            />
-          </motion.div>
+        .thumb-container { display: flex; justify-content: center; gap: 8px; margin: 15px 0; }
+        .thumb { width: 60px; height: 60px; border-radius: 10px; cursor: pointer; border: 2px solid #eee; object-fit: cover; }
+        .price { color: #1b5e20; font-size: 26px; font-weight: bold; margin: 10px 0; }
+        .buy-btn { background: black; color: white; width: 100%; padding: 15px; border: none; border-radius: 12px; font-size: 18px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
 
-          {/* Hoodie Details */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col justify-center"
-          >
-            <h1 className="text-4xl font-bold mb-3">NEW HHH Hoodie</h1>
+    <img src="20251208_190849.png" class="logo-top">
 
-            <p className="text-gray-700 mb-4 text-lg">
-              प्रीमियम क्वालिटी सफेद हुडी जिस पर “NEW HHH” एम्ब्रॉयडरी लोगो है।
-              सर्दियों और डेली वियर के लिए परफेक्ट।
-            </p>
+    <div class="card">
+        <h2 style="margin-top:0;">NEW HHH PREMIUM</h2>
+        
+        <div class="img-box">
+            <img id="view" src="050dbe7e-2ace-417e-b602-4f72fd5f9be5.jpg" class="main-img">
+            <img src="20251208_190849.png" class="hoodie-logo">
+        </div>
 
-            <ul className="list-disc list-inside text-gray-600 mb-5">
-              <li>100% कॉटन ब्लेंड</li>
-              <li>सॉफ्ट और कंफर्टेबल</li>
-              <li>यूनिसेक्स डिज़ाइन</li>
-              <li>साइज़: S, M, L, XL</li>
-            </ul>
+        <div class="thumb-container">
+            <img src="050dbe7e-2ace-417e-b602-4f72fd5f9be5.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
+            <img src="066935a5ad67999bd4e58cbe5d3648f7.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
+            <img src="1b1b96ddcece496bbe7d896e8f3c693e.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
+            <img src="1765202148167.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
+        </div>
 
-            <p className="text-3xl font-semibold mb-6">₹1,999</p>
+        <div class="price">₹1,999</div>
+        <button class="buy-btn" onclick="window.location.href='https://wa.me/91XXXXXXXXXX?text=Mujhe NEW HHH Hoodie order karni hai'">Order on WhatsApp</button>
+    </div>
 
-            <div className="flex gap-4">
-              <Button className="rounded-2xl px-6 py-3 flex gap-2">
-                <ShoppingCart className="w-5 h-5" />
-                Buy Now
-              </Button>
-
-              <Button variant="outline" className="rounded-2xl px-6 py-3 flex gap-2">
-                <Phone class
+</body>
+</html>
