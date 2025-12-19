@@ -5,55 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW HHH - Premium Collection</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background: #ececec; margin: 0; padding: 15px; }
-        .logo-top { width: 80px; margin-bottom: 10px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .card { background: white; padding: 25px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); max-width: 400px; margin: auto; position: relative; }
+        body { font-family: sans-serif; text-align: center; background: #f4f4f4; margin: 0; padding: 15px; }
+        .logo-top { width: 70px; margin-bottom: 10px; border-radius: 50%; }
+        .card { background: white; padding: 20px; border-radius: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
         
-        /* Realistic Logo Overlay Logic */
-        .image-container { position: relative; width: 100%; border-radius: 20px; overflow: hidden; background: #fff; }
-        .main-img { width: 100%; display: block; border-radius: 20px; }
-        .logo-on-hoodie { 
+        .img-box { position: relative; width: 100%; border-radius: 15px; overflow: hidden; }
+        .main-img { width: 100%; display: block; border-radius: 15px; }
+        
+        /* Realistic Logo Overlay */
+        .hoodie-logo { 
             position: absolute; 
-            top: 52%; left: 50%; 
+            top: 48%; left: 50%; 
             transform: translate(-50%, -50%); 
-            width: 85px; 
+            width: 100px; 
             opacity: 0.85; 
-            mix-blend-mode: multiply; /* Ise realistic banane ke liye */
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            mix-blend-mode: multiply; /* Realistic feel ke liye */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
-        .thumb-container { display: flex; justify-content: center; gap: 10px; margin: 20px 0; overflow-x: auto; padding: 5px; }
-        .thumb { width: 65px; height: 65px; border-radius: 12px; cursor: pointer; border: 2px solid #ddd; object-fit: cover; transition: 0.2s; }
-        .thumb:hover { border-color: #000; transform: scale(1.05); }
+        .thumb-container { display: flex; justify-content: center; gap: 8px; margin: 15px 0; overflow-x: auto; padding-bottom: 5px; }
+        .thumb { width: 65px; height: 65px; border-radius: 10px; cursor: pointer; border: 2px solid #eee; object-fit: cover; }
+        .thumb:active { border-color: #000; }
         
-        .price-tag { color: #1b5e20; font-size: 28px; font-weight: 800; margin: 15px 0 5px 0; }
-        .buy-btn { background: #000; color: #fff; width: 100%; padding: 18px; border: none; border-radius: 15px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .price { color: #1b5e20; font-size: 26px; font-weight: bold; margin: 10px 0; }
+        .buy-btn { background: black; color: white; width: 100%; padding: 15px; border: none; border-radius: 12px; font-size: 18px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
 
-    <img src="20251208_190849.png" class="logo-top" alt="Brand Logo">
+    <img src="20251208_190849.png" class="logo-top">
 
     <div class="card">
-        <h2 style="margin-top: 0; letter-spacing: 1px;">NEW HHH PREMIUM</h2>
+        <h2 style="margin-top:0;">NEW HHH PREMIUM</h2>
         
-        <div class="image-container">
+        <div class="img-box">
             <img id="view" src="050dbe7e-2ace-417e-b602-4f72fd5f9be5.jpg" class="main-img">
-            <img src="20251208_190849.png" class="logo-on-hoodie">
+            <img src="20251208_190849.png" class="hoodie-logo">
         </div>
 
         <div class="thumb-container">
             <img src="050dbe7e-2ace-417e-b602-4f72fd5f9be5.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
             <img src="066935a5ad67999bd4e58cbe5d3648f7.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
             <img src="1b1b96ddcece496bbe7d896e8f3c693e.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
+            <img src="1765202148167.jpg" class="thumb" onclick="document.getElementById('view').src=this.src">
         </div>
 
-        <div class="price-tag">₹1,999</div>
-        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Premium Quality Cotton • Realistic Print</p>
+        <div class="price">₹1,999</div>
+        <p style="color: gray; font-size: 14px;">Premium Quality Cotton • Realistic Print</p>
         
-        <button class="buy-btn" onclick="window.location.href='https://wa.me/91XXXXXXXXXX?text=Bhai, mujhe ye NEW HHH Hoodie order karni hai'">
-            Order on WhatsApp
-        </button>
+        <button class="buy-btn" onclick="window.location.href='https://wa.me/91XXXXXXXXXX?text=Mujhe NEW HHH Hoodie order karni hai'">Order on WhatsApp</button>
     </div>
 
 </body>
