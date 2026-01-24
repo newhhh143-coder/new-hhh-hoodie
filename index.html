@@ -1,48 +1,148 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW HHH - Official Store</title>
+    <title>NEW HHH - Premium Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: sans-serif; background: #ffffff; margin: 0; padding: 0; }
-        header { background: #000; color: #fff; padding: 12px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; }
-        .logo-top { width: 35px; border-radius: 50%; border: 1px solid #ffcc00; }
-        .container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; }
-        .card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
-        .img-box { width: 100%; aspect-ratio: 1/1.1; background: #f4f4f4; overflow: hidden; }
-        .main-img { width: 100%; height: 100%; object-fit: cover; }
-        .price { font-size: 16px; font-weight: bold; margin: 8px 0; color: #1b5e20; text-align: center; }
-        .buy-btn { background: #25D366; color: white; width: 90%; margin: 0 auto 10px; padding: 8px; border: none; border-radius: 5px; font-size: 12px; font-weight: bold; text-decoration: none; display: block; text-align: center; }
+        /* General Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Header (Top Navigation) */
+        header { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .menu-icon, .search-icon, .cart-icon { font-size: 24px; cursor: pointer; }
+        .logo { font-size: 22px; font-weight: 700; text-transform: uppercase; color: #333; }
+        .icons { display: flex; gap: 20px; }
+
+        /* Hero Section (Banner) */
+        .hero { background: url('https://via.placeholder.com/1200x500/f0f0f0/cccccc?text=Explore+Our+Collection') no-repeat center center/cover; color: #fff; text-align: center; padding: 100px 20px; min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2em; margin-bottom: 30px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+        .shop-now-btn { background: #000; color: #fff; padding: 12px 25px; border-radius: 5px; font-weight: 600; text-transform: uppercase; transition: background 0.3s; }
+        .shop-now-btn:hover { background: #333; }
+
+        /* Section Title (e.g., MODERN SOLID CLUB) */
+        .section-title { text-align: center; padding: 60px 20px 30px; font-size: 1.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: #000; margin: 15px auto 0; }
+
+        /* Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .product-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; position: relative; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        .product-image-container { width: 100%; aspect-ratio: 1/1.2; overflow: hidden; background: #f0f0f0; }
+        .product-image { width: 100%; height: 100%; object-fit: cover; }
+        
+        .product-info { padding: 15px; text-align: left; }
+        .product-title { font-size: 1.1em; font-weight: 600; margin-bottom: 8px; }
+        .product-prices { display: flex; align-items: baseline; margin-bottom: 5px; }
+        .original-price { text-decoration: line-through; color: #888; margin-right: 8px; font-size: 0.9em; }
+        .current-price { color: #000; font-size: 1.1em; font-weight: 700; }
+        
+        .sale-badge { position: absolute; top: 15px; left: 15px; background: #e74c3c; color: #fff; padding: 5px 10px; font-size: 0.8em; font-weight: 600; border-radius: 3px; }
+        
+        .rating { color: #f39c12; font-size: 0.8em; margin-top: 5px; }
+
+        /* Footer */
+        footer { background: #333; color: #fff; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        footer p { margin: 5px 0; font-size: 0.9em; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .hero p { font-size: 1em; }
+            .product-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <img src="20251208_190849.png" class="logo-top">
-        <span style="font-weight: bold;">NEW HHH COLLECTION</span>
+        <div class="menu-icon">&#9776;</div> <a href="#" class="logo">NEW HHH</a>
+        <div class="icons">
+            <div class="search-icon">&#128269;</div> <div class="cart-icon">&#128722;</div> </div>
     </header>
-    <div class="container">
-        <div class="card">
-            <div class="img-box"><img src="1765202148167.jpg" class="main-img"></div>
-            <div class="price">₹599</div>
-            <a href="https://wa.me/917829305786" class="buy-btn">WhatsApp</a>
-        </div>
-        <div class="card">
-            <div class="img-box"><img src="1765450413854%20(1).png" class="main-img"></div>
-            <div class="price">₹599</div>
-            <a href="https://wa.me/917829305786" class="buy-btn">WhatsApp</a>
-        </div>
-        <div class="card">
-            <div class="img-box"><img src="175637ba0979bcf4c638207.jpg" class="main-img"></div>
-            <div class="price">₹599</div>
-            <a href="https://wa.me/917829305786" class="buy-btn">WhatsApp</a>
-        </div>
-        <div class="card">
-            <div class="img-box"><img src="050dbe7e-2ace-417e-b602-4.jpg" class="main-img"></div>
-            <div class="price">₹599</div>
-            <a href="https://wa.me/917829305786" class="buy-btn">WhatsApp</a>
-        </div>
+
+    <div class="hero" style="background-image: url('https://i.imgur.com/your-dymora-banner-image.jpg');">
+        <h1>EXPLORE OUR NEW COLLECTION</h1>
+        <p>WARDROBE WITH EFFORTLESS FITS, VIBRANT COLORS.</p>
+        <a href="#products" class="shop-now-btn">SHOP NOW</a>
     </div>
+
+    <h2 class="section-title">FEATURED PRODUCTS</h2>
+
+    <div class="product-grid" id="products">
+        <div class="product-card">
+            <div class="sale-badge">SALE</div>
+            <div class="product-image-container">
+                <img src="https://i.imgur.com/1765202148167.jpg" alt="HHH Denim Jacket" class="product-image">
+            </div>
+            <div class="product-info">
+                <p class="product-title">HHH Denim Jacket</p>
+                <div class="product-prices">
+                    <span class="original-price">Rs. 1,499.00</span>
+                    <span class="current-price">Rs. 879.00</span>
+                </div>
+                <div class="rating">★★★★☆ 1 review</div>
+                <a href="https://wa.me/917829305786?text=Order: HHH Denim Jacket" class="shop-now-btn" style="background:#25D366; margin-top:10px; display:block;">WhatsApp Order</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="sale-badge">NEW</div>
+            <div class="product-image-container">
+                <img src="https://i.imgur.com/1765450413854 (1).png" alt="HHH Classic Hoodie" class="product-image">
+            </div>
+            <div class="product-info">
+                <p class="product-title">HHH Classic Hoodie</p>
+                <div class="product-prices">
+                    <span class="original-price">Rs. 1,200.00</span>
+                    <span class="current-price">Rs. 799.00</span>
+                </div>
+                <div class="rating">★★★★★ 3 reviews</div>
+                <a href="https://wa.me/917829305786?text=Order: HHH Classic Hoodie" class="shop-now-btn" style="background:#25D366; margin-top:10px; display:block;">WhatsApp Order</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="https://i.imgur.com/175637ba0979bcf4c638207.jpg" alt="HHH Signature Tee" class="product-image">
+            </div>
+            <div class="product-info">
+                <p class="product-title">HHH Signature Tee</p>
+                <div class="product-prices">
+                    <span class="current-price">Rs. 499.00</span>
+                </div>
+                <div class="rating">★★★☆☆ 2 reviews</div>
+                <a href="https://wa.me/917829305786?text=Order: HHH Signature Tee" class="shop-now-btn" style="background:#25D366; margin-top:10px; display:block;">WhatsApp Order</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="sale-badge">SALE</div>
+            <div class="product-image-container">
+                <img src="https://i.imgur.com/050dbe7e-2ace-417e-b602-4.jpg" alt="HHH Urban Shirt" class="product-image">
+            </div>
+            <div class="product-info">
+                <p class="product-title">HHH Urban Shirt</p>
+                <div class="product-prices">
+                    <span class="original-price">Rs. 999.00</span>
+                    <span class="current-price">Rs. 699.00</span>
+                </div>
+                <div class="rating">★★★★☆ 5 reviews</div>
+                <a href="https://wa.me/917829305786?text=Order: HHH Urban Shirt" class="shop-now-btn" style="background:#25D366; margin-top:10px; display:block;">WhatsApp Order</a>
+            </div>
+        </div>
+
+        </div>
+
+    <footer>
+        <p>&copy; 2026 NEW HHH Collection. All rights reserved.</p>
+        <p>newhhh143@gmail.com</p>
+    </footer>
+
 </body>
 </html>
