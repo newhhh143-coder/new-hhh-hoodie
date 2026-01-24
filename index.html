@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW HHH - Premium Collection</title>
+    <title>NEW HHH - Designer Collection</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
         body { background: #fff; color: #000; }
-        header { padding: 15px; text-align: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 100; font-weight: bold; letter-spacing: 2px; font-size: 20px; }
-        .hero { background: #f8f8f8; padding: 60px 20px; text-align: center; margin-bottom: 20px; border-bottom: 1px solid #eee; }
-        .hero h1 { font-size: 26px; margin-bottom: 10px; color: #222; text-transform: uppercase; }
-        .hero p { font-size: 14px; color: #666; line-height: 1.4; max-width: 80%; margin: 0 auto; }
-        .section-title { text-align: center; padding: 30px 20px 10px; font-weight: bold; text-transform: uppercase; font-size: 18px; letter-spacing: 1.5px; }
-        .container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 15px; }
-        .card { position: relative; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; margin-bottom: 10px; }
-        .sale-tag { position: absolute; top: 10px; left: 10px; background: #e74c3c; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: bold; z-index: 5; border-radius: 2px; }
-        .new-tag { position: absolute; top: 10px; left: 10px; background: #3498db; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: bold; z-index: 5; border-radius: 2px; }
-        .img-box { width: 100%; aspect-ratio: 3/4; background: #f4f4f4; overflow: hidden; }
+        header { padding: 15px; text-align: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 100; font-weight: bold; letter-spacing: 2px; font-size: 20px; text-transform: uppercase; }
+        .hero { background: #f8f8f8; padding: 50px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        .hero h1 { font-size: 24px; margin-bottom: 10px; color: #111; letter-spacing: 1px; }
+        .hero p { font-size: 13px; color: #666; line-height: 1.5; max-width: 300px; margin: 0 auto; text-transform: uppercase; }
+        .section-title { text-align: center; padding: 30px 20px 10px; font-weight: bold; text-transform: uppercase; font-size: 16px; letter-spacing: 2px; color: #333; }
+        .container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 12px; }
+        .card { position: relative; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; margin-bottom: 15px; }
+        .tag { position: absolute; top: 8px; left: 8px; color: #fff; padding: 3px 8px; font-size: 10px; font-weight: bold; z-index: 5; border-radius: 2px; text-transform: uppercase; }
+        .sale { background: #e74c3c; }
+        .new { background: #3498db; }
+        .img-box { width: 100%; aspect-ratio: 3/4; background: #f0f0f0; overflow: hidden; }
         .main-img { width: 100%; height: 100%; object-fit: cover; }
         .info { padding: 10px 0; text-align: left; }
-        .title { font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #222; }
-        .pricing { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
-        .old-price { text-decoration: line-through; color: #999; font-size: 11px; }
-        .new-price { font-weight: bold; font-size: 14px; color: #000; }
-        .rating { color: #f1c40f; font-size: 11px; margin-bottom: 8px; }
-        .buy-btn { background: #25D366; color: #fff; padding: 10px; border: none; width: 100%; font-size: 12px; font-weight: bold; border-radius: 4px; text-align: center; display: block; cursor: pointer; }
+        .title { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: #222; }
+        .pricing { display: flex; align-items: baseline; gap: 5px; margin-bottom: 4px; }
+        .old-p { text-decoration: line-through; color: #999; font-size: 11px; }
+        .new-p { font-weight: bold; font-size: 14px; color: #000; }
+        .rating { color: #f1c40f; font-size: 10px; margin-bottom: 8px; }
+        .btn { background: #25D366; color: #fff; padding: 10px; border: none; width: 100%; font-size: 11px; font-weight: bold; border-radius: 4px; text-align: center; cursor: pointer; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -36,34 +37,28 @@
         <p>Wardrobe with effortless fits, vibrant colors, and unique designs.</p>
     </div>
 
-    <div class="section-title">FEATURED PRODUCTS</div>
+    <div class="section-title">MODERN SOLID CLUB</div>
 
     <div class="container">
         <div class="card">
-            <div class="sale-tag">SALE</div>
+            <div class="tag sale">SALE</div>
             <div class="img-box"><img src="1765202148167.jpg" class="main-img"></div>
             <div class="info">
                 <div class="title">HHH Denim Jacket</div>
-                <div class="pricing">
-                    <span class="old-price">₹1,499</span>
-                    <span class="new-price">₹879</span>
-                </div>
+                <div class="pricing"><span class="old-p">₹1,499</span><span class="new-p">₹879</span></div>
                 <div class="rating">★★★★☆ 1 review</div>
-                <a href="https://wa.me/917829305786?text=Order: Denim Jacket" class="buy-btn">WHATSAPP ORDER</a>
+                <a href="https://wa.me/917829305786?text=Order: Denim Jacket" class="btn">WHATSAPP ORDER</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="new-tag">NEW</div>
+            <div class="tag new">NEW</div>
             <div class="img-box"><img src="1765450413854%20(1).png" class="main-img"></div>
             <div class="info">
                 <div class="title">HHH Classic Hoodie</div>
-                <div class="pricing">
-                    <span class="old-price">₹1,200</span>
-                    <span class="new-price">₹799</span>
-                </div>
+                <div class="pricing"><span class="old-p">₹1,200</span><span class="new-p">₹799</span></div>
                 <div class="rating">★★★★★ 3 reviews</div>
-                <a href="https://wa.me/917829305786?text=Order: Classic Hoodie" class="buy-btn">WHATSAPP ORDER</a>
+                <a href="https://wa.me/917829305786?text=Order: Classic Hoodie" class="btn">WHATSAPP ORDER</a>
             </div>
         </div>
 
@@ -71,26 +66,20 @@
             <div class="img-box"><img src="175637ba0979bcf4c638207.jpg" class="main-img"></div>
             <div class="info">
                 <div class="title">HHH Signature Tee</div>
-                <div class="pricing">
-                    <span class="old-price">₹899</span>
-                    <span class="new-price">₹499</span>
-                </div>
+                <div class="pricing"><span class="old-p">₹899</span><span class="new-p">₹499</span></div>
                 <div class="rating">★★★☆☆ 2 reviews</div>
-                <a href="https://wa.me/917829305786?text=Order: Signature Tee" class="buy-btn">WHATSAPP ORDER</a>
+                <a href="https://wa.me/917829305786?text=Order: Signature Tee" class="btn">WHATSAPP ORDER</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="sale-tag">SALE</div>
+            <div class="tag sale">SALE</div>
             <div class="img-box"><img src="050dbe7e-2ace-417e-b602-4.jpg" class="main-img"></div>
             <div class="info">
                 <div class="title">HHH Urban Shirt</div>
-                <div class="pricing">
-                    <span class="old-price">₹999</span>
-                    <span class="new-price">₹699</span>
-                </div>
-                <div class="rating">★★★★★ 5 reviews</div>
-                <a href="https://wa.me/917829305786?text=Order: Urban Shirt" class="buy-btn">WHATSAPP ORDER</a>
+                <div class="pricing"><span class="old-p">₹999</span><span class="new-p">₹699</span></div>
+                <div class="rating">★★★★☆ 5 reviews</div>
+                <a href="https://wa.me/917829305786?text=Order: Urban Shirt" class="btn">WHATSAPP ORDER</a>
             </div>
         </div>
     </div>
