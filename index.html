@@ -8,13 +8,14 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
         body { background: #fff; color: #000; }
         header { padding: 15px; text-align: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 100; font-weight: bold; letter-spacing: 2px; font-size: 20px; }
-        .hero { background: #f8f8f8; padding: 40px 20px; text-align: center; margin-bottom: 20px; border-bottom: 1px solid #eee; }
-        .hero h1 { font-size: 24px; margin-bottom: 10px; color: #333; }
-        .hero p { font-size: 14px; color: #666; line-height: 1.4; }
-        .section-title { text-align: center; padding: 20px; font-weight: bold; text-transform: uppercase; font-size: 18px; letter-spacing: 1px; }
+        .hero { background: #f8f8f8; padding: 60px 20px; text-align: center; margin-bottom: 20px; border-bottom: 1px solid #eee; }
+        .hero h1 { font-size: 26px; margin-bottom: 10px; color: #222; text-transform: uppercase; }
+        .hero p { font-size: 14px; color: #666; line-height: 1.4; max-width: 80%; margin: 0 auto; }
+        .section-title { text-align: center; padding: 30px 20px 10px; font-weight: bold; text-transform: uppercase; font-size: 18px; letter-spacing: 1.5px; }
         .container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 15px; }
-        .card { position: relative; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+        .card { position: relative; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; margin-bottom: 10px; }
         .sale-tag { position: absolute; top: 10px; left: 10px; background: #e74c3c; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: bold; z-index: 5; border-radius: 2px; }
+        .new-tag { position: absolute; top: 10px; left: 10px; background: #3498db; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: bold; z-index: 5; border-radius: 2px; }
         .img-box { width: 100%; aspect-ratio: 3/4; background: #f4f4f4; overflow: hidden; }
         .main-img { width: 100%; height: 100%; object-fit: cover; }
         .info { padding: 10px 0; text-align: left; }
@@ -23,7 +24,7 @@
         .old-price { text-decoration: line-through; color: #999; font-size: 11px; }
         .new-price { font-weight: bold; font-size: 14px; color: #000; }
         .rating { color: #f1c40f; font-size: 11px; margin-bottom: 8px; }
-        .buy-btn { background: #25D366; color: #fff; padding: 10px; border: none; width: 100%; font-size: 12px; font-weight: bold; border-radius: 4px; text-align: center; display: block; }
+        .buy-btn { background: #25D366; color: #fff; padding: 10px; border: none; width: 100%; font-size: 12px; font-weight: bold; border-radius: 4px; text-align: center; display: block; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -53,7 +54,7 @@
         </div>
 
         <div class="card">
-            <div class="sale-tag">NEW</div>
+            <div class="new-tag">NEW</div>
             <div class="img-box"><img src="1765450413854%20(1).png" class="main-img"></div>
             <div class="info">
                 <div class="title">HHH Classic Hoodie</div>
@@ -71,6 +72,7 @@
             <div class="info">
                 <div class="title">HHH Signature Tee</div>
                 <div class="pricing">
+                    <span class="old-price">₹899</span>
                     <span class="new-price">₹499</span>
                 </div>
                 <div class="rating">★★★☆☆ 2 reviews</div>
@@ -87,7 +89,7 @@
                     <span class="old-price">₹999</span>
                     <span class="new-price">₹699</span>
                 </div>
-                <div class="rating">★★★★☆ 5 reviews</div>
+                <div class="rating">★★★★★ 5 reviews</div>
                 <a href="https://wa.me/917829305786?text=Order: Urban Shirt" class="buy-btn">WHATSAPP ORDER</a>
             </div>
         </div>
